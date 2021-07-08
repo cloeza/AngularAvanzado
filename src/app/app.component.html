@@ -1,0 +1,52 @@
+<div class="wrapper">
+  <nav id="sidebar" [ngClass]="{'active': isOpen }">
+    <div class="sidebar-header">
+      <h3>TECGURUS</h3>
+      <hr>
+    </div>
+    <ul class="list-unstyled components">
+
+      <li *ngFor="let menu of menus">
+
+        <!--Agrupador-->
+        <a href="#{{menu.key}}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"
+          *ngIf="menu?.children?.length">{{menu.title}}</a>
+        <ul class="collapse list-unstyled" [id]="menu.key"  *ngIf="menu?.children?.length">
+          <li *ngFor="let child of menu.children"> <a [routerLink]="child.path">{{ child.title }}</a> </li>
+        </ul>
+
+        <!--No Agrupador-->
+        <a [routerLink]="menu.path" *ngIf="!menu.children">{{menu.title}}</a>
+      </li>
+
+
+
+
+
+    </ul>
+    <ul class="list-unstyled CTAs">
+      <li> <a href="#" class="download">Subscribe</a> </li>
+    </ul>
+  </nav>
+  <div class="content" style="width: 100%;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button type="button" id="sidebarCollapse" class="btn btn-info" (click)="isOpen=!isOpen"> <i
+          class="fa fa-align-justify"></i> </button> <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span
+          class="navbar-toggler-icon"></span> </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active"> <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item"> <a class="nav-link" href="#">Features</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#">Pricing</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#">Contact</a> </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="content-wrapper">
+      <router-outlet></router-outlet>
+      <div class="line"></div>
+    </div>
+  </div>
+</div>
