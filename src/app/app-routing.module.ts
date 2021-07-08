@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ExternalComponenteComponent } from './pages/external-componente/external-componente.component';
 import { WebComponentComponent} from './pages/web-component/web-component.component';
 import { InternalComponentsComponent} from './pages/internal-components/internal-components.component';
+import { RoutingParamsComponent} from './pages/routing-params/routing-params.component';
 
 const routes: Routes = [{
   path: 'external_componente',
@@ -15,7 +16,12 @@ const routes: Routes = [{
   {
     path:'internal_component',
     component: InternalComponentsComponent
+  },
+  {
+    path:'routing_params',
+    component: RoutingParamsComponent
   }
+  
 ];
 
 @NgModule({

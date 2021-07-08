@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Usuario} from '../../models/usuario';
+import * as Models from '../../models';
+
 @Component({
   selector: 'app-internal-components',
   templateUrl: './internal-components.component.html',
@@ -8,7 +9,7 @@ import { Usuario} from '../../models/usuario';
 })
 export class InternalComponentsComponent implements OnInit {
 
-  usuarios: Usuario[]=[
+  usuarios: Models.Usuario[]=[
     {
     name:'pedro',
     type: 'web'
@@ -20,6 +21,18 @@ export class InternalComponentsComponent implements OnInit {
     type: 'admin'
   }, {
     name:'pedro',
+    type: 'manager'
+  },{
+    name: 'Pedro',
+    type: 'web'
+  }, {
+    name: 'Pedro',
+    type: 'art'
+  }, {
+    name: 'Pedro',
+    type: 'admin'
+  }, {
+    name: 'Pedro',
     type: 'manager'
   }
 ]

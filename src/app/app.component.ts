@@ -27,9 +27,18 @@ export class AppComponent {
         title: 'Componente Interno',
         path: 'internal_component'
       }
-    ]
+    ] 
+  },
+  {
+    title: 'Routing',
+    key: 'routing',
+    children: [{
+      title: 'Parametros',
+      path: 'routing_params'
+    }]
 
-  },{
+  },
+  {  
     title: 'Usuario',
     path: 'usuarios'
   }]
