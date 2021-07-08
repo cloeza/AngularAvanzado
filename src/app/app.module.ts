@@ -8,13 +8,21 @@ import { ExternalComponenteComponent } from './pages/external-componente/externa
 import {DataTablesModule} from 'angular-datatables';
 import { WebComponentComponent } from './pages/web-component/web-component.component';
 import { InternalComponentsComponent } from './pages/internal-components/internal-components.component';
+import { WebComponent } from './pages/internal-components/web/web.component';
+import { ManagerComponent } from './pages/internal-components/manager/manager.component';
+import { AdminComponent } from './pages/internal-components/admin/admin.component';
+import { ArtComponent } from './pages/internal-components/art/art.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ExternalComponenteComponent,
     WebComponentComponent,
-    InternalComponentsComponent
+    InternalComponentsComponent,
+    WebComponent,
+    ManagerComponent,
+    AdminComponent,
+    ArtComponent
   ],
   imports: [
     BrowserModule,
