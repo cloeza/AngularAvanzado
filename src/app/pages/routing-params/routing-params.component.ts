@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {Usuario} from '../../models/usuario';
 @Component({
   selector: 'app-routing-params',
   templateUrl: './routing-params.component.html',
@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoutingParamsComponent implements OnInit {
 
+  usuario: Usuario = {
+    id: "random",
+    name: "Benito",
+    type: "web",
+  };
+  
   constructor() { }
 
   ngOnInit() {
