@@ -13,6 +13,10 @@ import { ManagerComponent } from './pages/internal-components/manager/manager.co
 import { AdminComponent } from './pages/internal-components/admin/admin.component';
 import { ArtComponent } from './pages/internal-components/art/art.component';
 import { RoutingParamsComponent } from './pages/routing-params/routing-params.component';
+import { PostsComponent } from './pages/routing-params/posts/posts.component';
+import { AboutComponent } from './pages/routing-params/about/about.component';
+import { FriendsComponent } from './pages/routing-params/friends/friends.component';
+import { ProductosComponent } from './pages/productos/productos.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { RoutingParamsComponent } from './pages/routing-params/routing-params.co
     ManagerComponent,
     AdminComponent,
     ArtComponent,
-    RoutingParamsComponent
+    RoutingParamsComponent,
+    PostsComponent,
+    AboutComponent,
+    FriendsComponent,
+    ProductosComponent
   ],
   imports: [
     BrowserModule,

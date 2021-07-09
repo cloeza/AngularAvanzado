@@ -5,6 +5,11 @@ import { WebComponentComponent} from './pages/web-component/web-component.compon
 import { InternalComponentsComponent} from './pages/internal-components/internal-components.component';
 import { RoutingParamsComponent} from './pages/routing-params/routing-params.component';
 
+import { PostsComponent } from './pages/routing-params/posts/posts.component';
+import { AboutComponent } from './pages/routing-params/about/about.component';
+import {FriendsComponent} from './pages/routing-params/friends/friends.component';
+import { ProductosComponent } from './pages/productos/productos.component';
+
 const routes: Routes = [{
   path: 'external_componente',
   component: ExternalComponenteComponent
@@ -19,8 +24,24 @@ const routes: Routes = [{
   },
   {
     path:'routing_params',
-    component: RoutingParamsComponent
-  }
+    component: RoutingParamsComponent,
+    children:[
+    {
+      path: 'posts',
+      component: PostsComponent
+    },{
+      path:'about',
+      component:AboutComponent
+    },{
+      path:'friends/:usuario_id',
+      component:FriendsComponent
+    },  
+    { path: "", pathMatch: "full", redirectTo: "posts" },
+    { path: "**", redirectTo: "posts" }
+  ]
+  },
+  {path : 'productos', component:ProductosComponent
+}
   
 ];
 
